@@ -1,0 +1,28 @@
+{
+  "name": "geo-therm",
+  "version": "1.0.0",
+  "description": "GEOGRAPHICAL THERMOMETRY",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lschmidt7/geo-therm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lschmidt7/geo-therm/issues"
+  },
+  "homepage": "https://github.com/lschmidt7/geo-therm#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "openweathermap-node": "^1.1.2",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
