@@ -1,6 +1,10 @@
 const Sequelize = require('sequelize')
 
-const connection = new Sequelize('IRRIGA', 'root', 'geo-therm1402', {
+db = 'IRRIGA'
+user = 'root'
+pass = 'geo-therm1402'
+
+const connection = new Sequelize(db, user, pass, {
   host: 'localhost',
   dialect: 'mysql'
 })
