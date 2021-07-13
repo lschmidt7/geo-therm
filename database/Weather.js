@@ -28,4 +28,6 @@ const Weather = connection.define('weather', {
   timestamps: false
 })
 
+Weather.sync({ force: false }).then(() => {})
+
 module.exports = Weather

@@ -10,9 +10,17 @@ const schedule = require('node-schedule')
 //   console.log(weathers)
 // })
 
+router.get('/test', (req, res) => {
+  Helper.testSave()
+  res.send('fim')
+})
+
 router.get('/all_weather', async (req, res) => {
   const cidades = await Helper.getAllCitiesName()
   const weathers = await Helper.getAllCitiesWeather(cidades)
+  for (const weather of weathers) {
+    Helper.saveWeather(weather)
+  }
   res.send(weathers)
 })
 
