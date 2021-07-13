@@ -8,5 +8,5 @@ require('dotenv').config()
 app.use(router)
 
 app.listen(4000, () => {
-    logger.info("Iniciando servidor")
+  logger.info('Iniciando servidor')
 })
