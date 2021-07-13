@@ -22,7 +22,8 @@
     "express": "^4.17.1",
     "mysql2": "^2.2.5",
     "node-schedule": "^2.0.0",
-    "sequelize": "^6.6.5"
+    "sequelize": "^6.6.5",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "standard": "^16.0.3"

@@ -1,21 +1,17 @@
 const express = require('express')
 const router = express.Router()
 const Helper = require('./helper')
-
 const schedule = require('node-schedule')
+const logger = require('./logger')
 
-// const job = schedule.scheduleJob('30 * * * * *', async function () {
-//   const cidades = await Helper.getAllCitiesName()
-//   const weathers = await Helper.getAllCitiesWeather(cidades)
-//   console.log(weathers)
-// })
-
-router.get('/test', (req, res) => {
-  Helper.testSave()
-  res.send('fim')
+const job = schedule.scheduleJob('* 30 * * * *', async function () {
+  logger.info("[AUTOMATICA] tarefa automática: pesquisando dados climáticos de todas as cidades")
+  const cidades = await Helper.getAllCitiesName()
+  const weathers = await Helper.getAllCitiesWeather(cidades)
 })
 
-router.get('/all_weather', async (req, res) => {
+router.get('/all_weather', async (req, res) => {  
+  logger.info("[ROTA] chamada para a rota: " + req.path)
   const cidades = await Helper.getAllCitiesName()
   const weathers = await Helper.getAllCitiesWeather(cidades)
   for (const weather of weathers) {
@@ -24,13 +20,10 @@ router.get('/all_weather', async (req, res) => {
   res.send(weathers)
 })
 
-router.get('/cities', async (req, res) => {
-  const cidades = await Helper.getAllCitiesName()
-  res.send(cidades)
-})
-
 router.get('/weather/:city', async (req, res) => {
+  logger.info("[ROTA] chamada para a rota: " + req.path)
   const weather = await Helper.getWeather(req.params.city)
+  Helper.saveWeather(weather)
   res.send(weather)
 })
 

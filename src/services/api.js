@@ -6,7 +6,7 @@ const api = axios.create({
 
 api.interceptors.request.use((config) => {
   if (config.method === 'get') {
-    config.url = 'weather?q=' + config.url + '&appid=' + process.env.API_WEATHER_KEY
+    config.url = 'weather?q=' + config.url + '&appid=' + process.env.API_WEATHER_KEY + '&units=metric'
   }
   return config
 }, (error) => {
