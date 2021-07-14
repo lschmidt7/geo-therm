@@ -10,3 +10,5 @@ app.use(router)
 app.listen(4000, () => {
   logger.info('Iniciando servidor')
 })
+
+module.exports = app
