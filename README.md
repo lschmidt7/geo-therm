@@ -2,10 +2,10 @@
 
 ## Executando a aplicação
 
-1. git clone https://github.com/lschmidt7/geo-therm
-2. cd path/to/geo-therm
-3. npm install
-4. node app.js
+1. ```git clone https://github.com/lschmidt7/geo-therm```
+2. ```cd path/to/geo-therm```
+3. ```npm install```
+4. ```node app.js```
 
 ## Rotas
 
