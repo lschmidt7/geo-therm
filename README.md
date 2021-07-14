@@ -2,10 +2,10 @@ GEOGRAPHICAL THERMOMETRY
 
 Executar aplicação
 
-> git clone https://github.com/lschmidt7/geo-therm
-> cd path/to/geo-therm
-> npm install
-> node app.js
+- > git clone https://github.com/lschmidt7/geo-therm
+- > cd path/to/geo-therm
+- > npm install
+- > node app.js
 
 **Rotas:** Existem basicamente duas rotas de acesso ao sistema
 - '/all_weather': busca todas as cidades armazenadas no banco, requisita os dados atuais de clima através da API e armazena os dados climáticos obtidos na tablea 'weather' da base de dados.
