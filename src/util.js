@@ -4,6 +4,11 @@ function unixToDate (dt) {
   return dateObject.toLocaleString('pt-BR')
 }
 
+function unixToTime (dt) {
+  const dateObject = new Date(dt * 1000)
+  return dateObject.toLocaleTimeString('pt-BR').replace(' AM','').replace(' PM','')
+}
+
 function removeAcentos (word) {
   const comAcento = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝŔÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿŕ'
   const semAcento = 'AAAAAAACEEEEIIIIDNOOOOOOUUUUYRPBaaaaaaaceeeeiiiiðnoooooouuuuypyr'
@@ -17,4 +22,4 @@ function removeAcentos (word) {
   return word
 }
 
-module.exports = { unixToDate, removeAcentos }
+module.exports = { unixToDate, unixToTime, removeAcentos }
