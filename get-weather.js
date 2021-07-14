@@ -1,7 +1,8 @@
 const axios = require('axios')
+const api = require('./src/services/api')
 
 process.argv.splice(0, 2);
-const opt = process.argv.join(' ')
+const opt = process.argv.join('%20')
 
 if(opt == 'all' || opt == ''){
     axios.get('http://localhost:4000/all_weather').then(res => {

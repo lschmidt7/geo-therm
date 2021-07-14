@@ -1,4 +1,13 @@
 
+function rainAmount(weather)
+{
+  try {
+    return weather.rain['1h']
+  } catch(e) {
+    return 0
+  }
+}
+
 function unixToDate (dt) {
   const dateObject = new Date(dt * 1000)
   return dateObject.toLocaleString('pt-BR')
@@ -22,4 +31,4 @@ function removeAcentos (word) {
   return word
 }
 
-module.exports = { unixToDate, unixToTime, removeAcentos }
+module.exports = { unixToDate, unixToTime, removeAcentos, rainAmount }

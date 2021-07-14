@@ -13,7 +13,7 @@ function saveWeather (weather) {
     temp_max: weather.main.temp_max,
     wind_speed: weather.wind.speed,
     sunrise_hour: Util.unixToTime(weather.sys.sunrise),
-    rain_amount_last_hour: 0
+    rain_amount_last_hour: Util.rainAmount(weather)
   })
 }
 

@@ -27,7 +27,7 @@ O sistema conta com duas rotinas manuais disponíveis no sistema.
 A primeira rotina faz a requisição do clima de todas as cidades e armazena no banco
 > ```node get-weather all```
 
-A segundo rotina faz a requisição do clima de uma única cidade
+A segunda rotina faz a requisição do clima de uma única cidade
 > ```node get-weather nome_cidade```
 
 ## Rotina Automatizada

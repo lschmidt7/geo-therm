@@ -4,7 +4,7 @@ const Helper = require('./helper')
 const schedule = require('node-schedule')
 const logger = require('./logger')
 
-schedule.scheduleJob('30 * * * * *', async function () {
+schedule.scheduleJob('* 30 * * * *', async function () {
   logger.info('[AUTOMATICA] pesquisando dados climáticos de todas as cidades')
   const cidades = await Helper.getAllCitiesName()
   Helper.getAllCitiesWeather(cidades)
