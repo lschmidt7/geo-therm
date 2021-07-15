@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const router = require('./src/routes')
 const logger = require('./src/logger')
-const tasks = require('./src/tasks')
+require('./src/tasks')
 
 require('dotenv').config()
 

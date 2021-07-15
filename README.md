@@ -25,10 +25,10 @@ Existem duas rotas de acesso ao sistema
 O sistema conta com duas rotinas manuais disponíveis no sistema.
 
 A primeira rotina faz a requisição do clima de todas as cidades e armazena no banco
-> ```node get-weather all```
+> ```node weather all```
 
 A segunda rotina faz a requisição do clima de uma única cidade
-> ```node get-weather nome_cidade```
+> ```node weather nome_cidade```
 
 ## Rotina Automatizada
 
@@ -38,3 +38,9 @@ Aos 30 minutos de cada hora do dia o sistema requisita as informações climáti
 
 Os logs são gerados em dois arquivos, *info.log* e *error.log*, o primeiro contempla o log geral do sistema com todas as mensagens e o segundo, mais restritivo, armazena todos os logs de erro do sistema.
 Cada registro do log armazena *mensagem*, *nível* e *timestamp* do registro.
+
+## Tests
+
+Os testes se encontram no arquivo *__tests__/routes.spec.js*. Para executar os testes, rode o comando abaixo.
+
+```npm run test```

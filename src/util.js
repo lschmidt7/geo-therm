@@ -1,4 +1,15 @@
 
+function formatArgs (args) {
+  args.splice(0, 2)
+  return args.join('%20')
+}
+
+function formatCityName (city) {
+  city = city.split(' ').join('%20')
+  city = removeAcentos(city)
+  return city
+}
+
 function rainAmount (weather) {
   try {
     return weather.rain['1h']
@@ -30,4 +41,4 @@ function removeAcentos (word) {
   return word
 }
 
-module.exports = { unixToDate, unixToTime, removeAcentos, rainAmount }
+module.exports = { unixToDate, unixToTime, removeAcentos, rainAmount, formatArgs, formatCityName }
