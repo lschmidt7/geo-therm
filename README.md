@@ -18,8 +18,8 @@
 
 Existem duas rotas de acesso ao sistema
 
-- **/all_weather**: busca todas as cidades armazenadas no banco, requisita os dados atuais de clima através da API e armazena os dados climáticos obtidos na tablea *weather* da base de dados.
-- **/weather/:city**: requisita os dados climáticos da cidade informada pela rota e armazena na tablea *weather* do banco
+- **/all_weather**: busca todas as cidades armazenadas no banco, requisita os dados atuais de clima através da API e armazena os dados climáticos obtidos na tabela *weather* da base de dados.
+- **/weather/:city**: requisita os dados climáticos da cidade informada pela rota e armazena na tabela *weather* do banco
 
 ## Rotinas Manuais
 
@@ -42,6 +42,6 @@ Cada registro do log armazena *mensagem*, *nível* e *timestamp* do registro.
 
 ## Tests
 
-Os testes se encontram no arquivo *__tests__/routes.spec.js*. Para executar os testes, rode o comando abaixo.
+Os testes se encontram no arquivo *'__tests__'/routes.spec.js*. Para executar os testes, rode o comando abaixo.
 
 ```npm run test```
