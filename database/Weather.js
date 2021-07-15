@@ -1,6 +1,6 @@
 const connection = require('./database')
-const Sequelize = require('sequelize');
-const Cities = require('./Cities');
+const Sequelize = require('sequelize')
+const Cities = require('./Cities')
 
 const Weather = connection.define('weather', {
   datetime: {

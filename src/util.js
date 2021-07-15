@@ -1,9 +1,8 @@
 
-function rainAmount(weather)
-{
+function rainAmount (weather) {
   try {
     return weather.rain['1h']
-  } catch(e) {
+  } catch (e) {
     return 0
   }
 }
@@ -15,7 +14,7 @@ function unixToDate (dt) {
 
 function unixToTime (dt) {
   const dateObject = new Date(dt * 1000)
-  return dateObject.toLocaleTimeString('pt-BR').replace(' AM','').replace(' PM','')
+  return dateObject.toLocaleTimeString('pt-BR').replace(' AM', '').replace(' PM', '')
 }
 
 function removeAcentos (word) {

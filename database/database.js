@@ -11,11 +11,10 @@ const connection = new Sequelize(db, user, pass, {
 })
 
 connection.authenticate().then(() => {
-  logger.info("[DB] banco conectado com sucesso")
+  logger.info('[DB] banco conectado com sucesso')
 })
-.catch(err => {
-  logger.error('[DB] problema ao conectar com o banco: ' + err);
-});
-
+  .catch(err => {
+    logger.error('[DB] problema ao conectar com o banco: ' + err)
+  })
 
 module.exports = connection

@@ -17,7 +17,13 @@ function saveWeather (weather) {
   })
 }
 
-async function getWeather (cityName) {
+function saveWeathers (weathers) {
+  for (const weather of weathers) {
+    saveWeather(weather)
+  }
+}
+
+async function getCityWeather (cityName) {
   logger.info('[API] chamada para api openweathermap')
   cityName = cityName.split(' ').join('%20')
   cityName = Util.removeAcentos(cityName)
@@ -30,7 +36,7 @@ async function getAllCitiesWeather (cidades) {
   const weathers = []
   for (const cidade of cidades) {
     const cityName = cidade.dataValues.name
-    const weather = await getWeather(cityName)
+    const weather = await getCityWeather(cityName)
     weathers.push(weather)
   }
   return weathers
@@ -44,4 +50,4 @@ function getAllCitiesName () {
   return cidades
 }
 
-module.exports = { getAllCitiesName, getWeather, getAllCitiesWeather, saveWeather }
+module.exports = { getAllCitiesName, getCityWeather, getAllCitiesWeather, saveWeather, saveWeathers }
