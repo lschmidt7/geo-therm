@@ -42,6 +42,6 @@ Cada registro do log armazena *mensagem*, *nível* e *timestamp* do registro.
 
 ## Tests
 
-Os testes se encontram no arquivo *'__tests__'/routes.spec.js*. Para executar os testes, rode o comando abaixo.
+Os testes se encontram no arquivo *\__tests__/routes.spec.js*. Para executar os testes, rode o comando abaixo.
 
 ```npm run test```
