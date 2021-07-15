@@ -11,7 +11,8 @@
 2. ```cd path/to/geo-therm```
 3. ```npm install```
 4. ```create .env file with API_WEATHER_KEY variable```
-5. ```node app.js```
+5. ```npm run createdb```
+5. ```npm run dev```
 
 ## Rotas
 
@@ -25,10 +26,10 @@ Existem duas rotas de acesso ao sistema
 O sistema conta com duas rotinas manuais disponíveis no sistema.
 
 A primeira rotina faz a requisição do clima de todas as cidades e armazena no banco
-> ```node weather all```
+> ```npm run weather all```
 
 A segunda rotina faz a requisição do clima de uma única cidade
-> ```node weather nome_cidade```
+> ```npm run weather nome_cidade```
 
 ## Rotina Automatizada
 

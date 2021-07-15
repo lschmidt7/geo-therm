@@ -1,5 +1,5 @@
 const axios = require('axios')
-const { formatArgs } = require('./src/util')
+const { formatArgs } = require('../util')
 
 const city = formatArgs(process.argv)
 
