@@ -62,4 +62,4 @@ async function registerCitiesWeather () {
   return weathers
 }
 
-module.exports = { getCitiesName, getCityWeather, getCitiesWeather, saveWeather, saveWeathers, registerCityWeather, registerCitiesWeather }
+module.exports = { registerCityWeather, registerCitiesWeather }
