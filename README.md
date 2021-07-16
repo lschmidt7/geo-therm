@@ -10,9 +10,9 @@
 1. ```git clone https://github.com/lschmidt7/geo-therm```
 2. ```cd path/to/geo-therm```
 3. ```npm install```
-4. ```create .env file with API_WEATHER_KEY variable```
+4. ```create .env file with the variable API_WEATHER_KEY = key_openweathermap_api```
 5. ```npm run createdb```
-5. ```npm run dev```
+6. ```npm run dev```
 
 ## Rotas
 
