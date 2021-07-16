@@ -1,6 +1,8 @@
 const mysql = require('mysql2/promise');
 const fs = require('fs');
 
+require('dotenv').config()
+
 mysql.createConnection({
     user     : process.env.DB_USER,
     password : process.env.DB_PASS,

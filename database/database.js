@@ -1,6 +1,8 @@
 const Sequelize = require('sequelize')
 const logger = require('../src/logger')
 
+require('dotenv').config()
+
 const db = 'IRRIGA'
 const user = process.env.DB_USER
 const pass = process.env.DB_PASS
