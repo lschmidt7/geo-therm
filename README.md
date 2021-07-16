@@ -24,6 +24,7 @@ Existem duas rotas de acesso ao sistema
 ## Rotinas Manuais
 
 O sistema conta com duas rotinas manuais disponíveis no sistema.
+Obs: o servidor deve estar em execução.
 
 A primeira rotina faz a requisição do clima de todas as cidades e armazena no banco
 > ```npm run weather all```
