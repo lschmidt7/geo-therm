@@ -2,8 +2,8 @@ const mysql = require('mysql2/promise');
 const fs = require('fs');
 
 mysql.createConnection({
-    user     : 'root',
-    password : 'geo-therm1402',
+    user     : process.env.DB_USER,
+    password : process.env.DB_PASS,
     multipleStatements: true
 }).then(connection => {
     const sql = fs.readFileSync('./database/cities.sql').toString();

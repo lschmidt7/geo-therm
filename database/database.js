@@ -2,8 +2,8 @@ const Sequelize = require('sequelize')
 const logger = require('../src/logger')
 
 const db = 'IRRIGA'
-const user = 'root'
-const pass = 'geo-therm1402'
+const user = process.env.DB_USER
+const pass = process.env.DB_PASS
 
 const connection = new Sequelize(db, user, pass, {
   host: 'localhost',
